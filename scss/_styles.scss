@@ -54,30 +54,16 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #fff;
-  .btn-outline-light {
-    border-color: transparent;
-    border-width: 2px;
-    &:hover {
-      color: #ffffff;
-      border-color: #5b6168;
-      background-color: transparent;
-      border-width: 2px;
-    }
+  border: 2px solid transparent;
+  padding: 1px 10px;
+  border-radius: 4px;
+  &:hover {
+    border: 2px solid #5b6168;
   }
-}
-
-.intro-par {
-  color: #ccd0d7;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  .btn-outline-light {
-    text-transform: uppercase;
-    color: #23b7a4;
-    border-color: #23b7a4;
-    border-width: 2px;
-  }
+  border: 2px solid #23b7a4;
 }
 
 .carousel-item {
@@ -95,13 +81,24 @@ h1 {
   text-transform: uppercase;
 }
 
-body h2 {
+h2 {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 36px;
   color: #292f36;
   text-transform: uppercase;
   margin-top: 85px;
   margin-bottom: 60px;
+  position: relative;
+  padding-left: 24px;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 10px;
+    background: #e1e6ea;
+    top: 0;
+    left: 0;
+  }
 }
 
 h3 {
@@ -111,25 +108,11 @@ h3 {
   text-transform: uppercase;
 }
 
-h4 {
-  font-family: "Quattrocento Sans", sans-serif;
-  font-size: 16px;
-  color: #292f36;
-  text-transform: uppercase;
-  background: #e1e6ea;
-
-  p {
-    font-family: "Open Sans", sans-serif;
-    color: #8d8f92;
-    text-transform: none;
-  }
-}
-
 .section-box {
   span {
-    display: flex;
     font-family: "Quattrocento Sans", sans-serif;
     width: 50px;
+    min-width: 50px;
     height: 50px;
     background: #23b7a4;
     font-size: 20px;
@@ -139,4 +122,238 @@ h4 {
 
 .section-item {
   margin-left: 50px;
+}
+
+.offcanvas-top {
+  height: 100vh;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 9px;
+  width: 9px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: none;
+  opacity: 1;
+}
+.carousel-indicators button.active {
+  background-color: #fff;
+}
+
+.carousel-caption {
+  left: 0;
+  top: calc(50% - 100px);
+  right: inherit;
+  height: 200px;
+  text-align: left;
+}
+
+.wrapper-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.column-relative {
+  position: relative;
+  height: 100%;
+}
+
+.custom-height {
+  height: 100%;
+}
+
+.main-wrapper {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #dde1e4;
+}
+
+.social-networks {
+  height: 60px;
+  .facebook {
+    height: 60px;
+    width: 60px;
+    margin-right: 1px;
+    background-color: #c8cdd0;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 60px;
+      width: 60px;
+      background: url(../images/sprite/sprite.svg#facebook-icon) no-repeat;
+    }
+    &:hover {
+      background-color: #d0d5d9;
+    }
+  }
+
+  .twitter {
+    height: 60px;
+    width: 60px;
+    margin-right: 1px;
+    background-color: #c8cdd0;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 60px;
+      width: 60px;
+      background: url(../images/sprite/sprite.svg#twitter-icon) no-repeat;
+    }
+    &:hover {
+      background-color: #d0d5d9;
+    }
+  }
+  .google {
+    height: 60px;
+    width: 60px;
+    margin-right: 1px;
+    background-color: #c8cdd0;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 60px;
+      width: 60px;
+      background: url(../images/sprite/sprite.svg#google-icon) no-repeat;
+    }
+    &:hover {
+      background-color: #d0d5d9;
+    }
+  }
+  .dribbble {
+    height: 60px;
+    width: 60px;
+    margin-right: 1px;
+    background-color: #c8cdd0;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 60px;
+      width: 60px;
+      background: url(../images/sprite/sprite.svg#dribbble-icon) no-repeat;
+    }
+    &:hover {
+      background-color: #d0d5d9;
+    }
+  }
+  .behance {
+    height: 60px;
+    width: 60px;
+    margin-right: 1px;
+    background-color: #c8cdd0;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 60px;
+      width: 60px;
+      background: url(../images/sprite/sprite.svg#behance-icon) no-repeat;
+    }
+    &:hover {
+      background-color: #d0d5d9;
+    }
+  }
+}
+
+.meet-team {
+  position: relative;
+  text-decoration: none;
+  &:hover h4,
+  &:hover p {
+    background: #3a454d;
+    color: #fff;
+  }
+  &:hover .social-net-team a {
+    display: block;
+  }
+  h4 {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 16px;
+    color: #292f36;
+    text-transform: uppercase;
+    background: #e1e6ea;
+    padding: 20px 20px;
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      color: #8d8f92;
+      text-transform: none;
+    }
+  }
+}
+
+.social-net-team {
+  position: absolute;
+  top: 0;
+  left: 0;
+  a {
+    display: none;
+    &:hover {
+      background: #4e5a62;
+    }
+  }
+  .twitter-team {
+    height: 50px;
+    width: 50px;
+    margin-right: 1px;
+    background-color: #3a454d;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 50px;
+      width: 50px;
+      background: url(../images/sprite/sprite.svg#twitter-icon) no-repeat;
+    }
+  }
+  .facebook-team {
+    height: 50px;
+    width: 50px;
+    margin-right: 1px;
+    background-color: #3a454d;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 50px;
+      width: 50px;
+      background: url(../images/sprite/sprite.svg#facebook-icon) no-repeat;
+    }
+  }
+  .linkedin-team {
+    height: 50px;
+    width: 50px;
+    margin-right: 1px;
+    background-color: #3a454d;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 50px;
+      width: 50px;
+      background: url(../images/sprite/sprite.svg#linkedin-icon) no-repeat;
+    }
+  }
 }

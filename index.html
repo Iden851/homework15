@@ -7,14 +7,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quattrocento+Sans:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quattrocento+Sans&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/all.min.css" />
         <title>MoDEST.</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav class="navbar navbar-light navbar-expand-lg bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="images/modest-logo.png" alt="image discription" />
@@ -22,94 +22,159 @@
                 <button
                     class="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav coloritem">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"
-                                ><button type="button" class="btn btn-outline-light">home</button></a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"
-                                ><button type="button" class="btn btn-outline-light">about</button></a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"
-                                ><button type="button" class="btn btn-outline-light">work</button></a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"
-                                ><button type="button" class="btn btn-outline-light">team</button></a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"
-                                ><button type="button" class="btn btn-outline-light">services</button></a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"
-                                ><button type="button" class="btn btn-outline-light">features</button></a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"
-                                ><button type="button" class="btn btn-outline-light">contact</button></a
-                            >
-                        </li>
-                    </ul>
+                <div
+                    class="offcanvas offcanvas-top bg-dark"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="images/modest-logo.png" alt="image discription" />
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">about</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
+
         <div class="container-fluid">
-            <div class="row">
+            <div class="row g-0">
                 <div class="col-12">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators justify-content-end">
+                            <button
+                                type="button"
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="0"
+                                class="active"
+                                aria-current="true"
+                                aria-label="Slide 1"
+                            ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 2"
+                            ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 3"
+                            ></button>
+                        </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="images/intro-image1.jpg" class="d-block w-100" alt="image discription" />
-                                <div class="carousel-caption d-none d-md-block d-flex align-items-center">
-                                    <h1>welcome to our marketplace</h1>
-                                    <p class="intro-par">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus,
-                                        tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus ...
-                                    </p>
-                                    <button type="button" class="btn btn-outline-light">VIEW MORE</button>
-                                    <button type="button" class="btn btn-outline-light">VIDEO TOUR</button>
+                                <div class="wrapper-caption">
+                                    <div class="container custom-height">
+                                        <div class="row column-relative">
+                                            <div class="col-7 custom-height">
+                                                <div class="carousel-caption d-none d-md-block d-flex">
+                                                    <h1>welcome to our marketplace</h1>
+                                                    <p class="intro-par col-7">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                                        nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla
+                                                        vestibulu lacus ...
+                                                    </p>
+                                                    <button type="button" class="btn btn-outline-light">
+                                                        VIEW MORE
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-light">
+                                                        VIDEO TOUR
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="images/intro-image1.jpg" class="d-block w-100" alt="image discription" />
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h1>welcome to our marketplace</h1>
-                                    <p class="intro-par">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus,
-                                        tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus ...
-                                    </p>
-                                    <button type="button" class="btn btn-outline-light">VIEW MORE</button>
-                                    <button type="button" class="btn btn-outline-light">VIDEO TOUR</button>
+                                <div class="wrapper-caption">
+                                    <div class="container custom-height">
+                                        <div class="row column-relative">
+                                            <div class="col-7 custom-height">
+                                                <div class="carousel-caption d-none d-md-block d-flex">
+                                                    <h1>welcome to our marketplace</h1>
+                                                    <p class="intro-par col-7">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                                        nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla
+                                                        vestibulu lacus ...
+                                                    </p>
+                                                    <button type="button" class="btn btn-outline-light">
+                                                        VIEW MORE
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-light">
+                                                        VIDEO TOUR
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="carousel-item">
                                 <img src="images/intro-image1.jpg" class="d-block w-100" alt="image discription" />
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h1>welcome to our marketplace</h1>
-                                    <p class="intro-par">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus,
-                                        tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus ...
-                                    </p>
-                                    <button type="button" class="btn btn-outline-light">VIEW MORE</button>
-                                    <button type="button" class="btn btn-outline-light">VIDEO TOUR</button>
+                                <div class="wrapper-caption">
+                                    <div class="container custom-height">
+                                        <div class="row column-relative">
+                                            <div class="col-7 custom-height">
+                                                <div class="carousel-caption d-none d-md-block d-flex">
+                                                    <h1>welcome to our marketplace</h1>
+                                                    <p class="intro-par col-7">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                                        nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla
+                                                        vestibulu lacus ...
+                                                    </p>
+                                                    <button type="button" class="btn btn-outline-light">
+                                                        VIEW MORE
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-light">
+                                                        VIDEO TOUR
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -117,83 +182,117 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row d-flex justify-content-between">
-                <h2 class="col-12">we are modest.</h2>
-                <article class="col-md-7">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non,
-                        ornare sagittis dolor. Nulla vestibulu lacus sed molestie gravida. Crferm entum quismagna
-                        congue, vel sodales arcu vestibulum. Nunc lobortis dui magna, quis lacusullamcorper at.
-                    </p>
-                    <p>
-                        Phasellus sollicitudin ante eros ornare, sit amet luctus lorem semper. Suspendisse posuere,
-                        quamdictum consectetur, augue metus pharetra tellus, eu feugiatloreg egetnisi. Cras ornare
-                        bibendum ante, ut bibendum odio convallis eget. vel sodales arcu vestibulum
-                    </p>
-                </article>
-                <section class="col-md-5">
-                    <div class="flex-row d-flex section-box">
-                        <span class="d-flex align-items-center justify-content-center">01</span>
-                        <div class="flex-column section-item">
-                            <h3>Dedication to the customers</h3>
-                            <p>
-                                Integer vel lacus non dui ullamcorper venenatis. Aliquam vitae tristique nisi, vitae
-                                ullamcorper risus.
-                            </p>
+        <div class="main-wrapper">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-12"><h2>we are modest.</h2></div>
+
+                    <article class="col-md-7">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor
+                            non, ornare sagittis dolor. Nulla vestibulu lacus sed molestie gravida. Crferm entum
+                            quismagna congue, vel sodales arcu vestibulum. Nunc lobortis dui magna, quis
+                            lacusullamcorper at.
+                        </p>
+                        <p>
+                            Phasellus sollicitudin ante eros ornare, sit amet luctus lorem semper. Suspendisse posuere,
+                            quamdictum consectetur, augue metus pharetra tellus, eu feugiatloreg egetnisi. Cras ornare
+                            bibendum ante, ut bibendum odio convallis eget. vel sodales arcu vestibulum
+                        </p>
+                        <div class="d-flex justify-content-start social-networks">
+                            <a href="#" class="facebook"></a>
+                            <a href="#" class="twitter"></a>
+                            <a href="#" class="google"></a>
+                            <a href="#" class="dribbble"></a>
+                            <a href="#" class="behance"></a>
                         </div>
-                    </div>
-                    <div class="flex-row d-flex section-box">
-                        <span class="d-flex align-items-center justify-content-center">02</span>
-                        <div class="flex-column section-item">
-                            <h3>working closely with our clients</h3>
-                            <p>
-                                Sed blandit nisi urna, sed pellentesque enim consectetur vitae. Suspendisse ut vehicula
-                                nibh.
-                            </p>
+                    </article>
+
+                    <section class="col-md-5">
+                        <div class="flex-row d-flex section-box">
+                            <span class="d-flex align-items-center justify-content-center">01</span>
+                            <div class="flex-column section-item">
+                                <h3>Dedication to the customers</h3>
+                                <p>
+                                    Integer vel lacus non dui ullamcorper venenatis. Aliquam vitae tristique nisi, vitae
+                                    ullamcorper risus.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex-row d-flex section-box">
-                        <span class="d-flex align-items-center justify-content-center">03</span>
-                        <div class="flex-column section-item">
-                            <h3>increase happiness</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend laoreet euismod.
-                            </p>
+                        <div class="flex-row d-flex section-box">
+                            <span class="d-flex align-items-center justify-content-center">02</span>
+                            <div class="flex-column section-item">
+                                <h3>working closely with our clients</h3>
+                                <p>
+                                    Sed blandit nisi urna, sed pellentesque enim consectetur vitae. Suspendisse ut
+                                    vehicula nibh.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                        <div class="flex-row d-flex section-box">
+                            <span class="d-flex align-items-center justify-content-center">03</span>
+                            <div class="flex-column section-item">
+                                <h3>increase happiness</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend laoreet
+                                    euismod.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <h2 class="col-12">meet the team.</h2>
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-12"><h2>meet the team.</h2></div>
+
+                <div class="col-12 col-sm-6 col-md-3 meet-team">
                     <img class="d-block w-100" src="images/team1.jpg" alt="" />
                     <h4>
                         Gloria Bromley
                         <p>CEO and Founder</p>
+                        <span class="d-flex justify-content-center social-net-team">
+                            <a href="#" class="twitter-team"></a>
+                            <a href="#" class="facebook-team"></a>
+                            <a href="#" class="linkedin-team"></a>
+                        </span>
                     </h4>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-12 col-sm-6 col-md-3 meet-team">
                     <img class="d-block w-100" src="images/team2.jpg" alt="" />
                     <h4>
                         Paul Torres
                         <p>Head of Development</p>
+                        <span class="d-flex justify-content-center social-net-team">
+                            <a href="#" class="twitter-team"></a>
+                            <a href="#" class="facebook-team"></a>
+                            <a href="#" class="linkedin-team"></a>
+                        </span>
                     </h4>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-12 col-sm-6 col-md-3 meet-team">
                     <img class="d-block w-100" src="images/team3.jpg" alt="" />
                     <h4>
                         Judith Gillette
                         <p>Graphic Desinger</p>
+                        <span class="d-flex justify-content-center social-net-team">
+                            <a href="#" class="twitter-team"></a>
+                            <a href="#" class="facebook-team"></a>
+                            <a href="#" class="linkedin-team"></a>
+                        </span>
                     </h4>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-12 col-sm-6 col-md-3 meet-team">
                     <img class="d-block w-100" src="images/team4.jpg" alt="" />
                     <h4>
                         Delores Reed
                         <p>Client Service Director</p>
+                        <span class="d-flex justify-content-center social-net-team">
+                            <a href="#" class="twitter-team"></a>
+                            <a href="#" class="facebook-team"></a>
+                            <a href="#" class="linkedin-team"></a>
+                        </span>
                     </h4>
                 </div>
             </div>
