@@ -1,61 +1,27 @@
-body {
-  color: #8d8f92;
-  padding-top: 20px;
-  &:before {
-    z-index: 10001;
-    line-height: 20px;
-    font-weight: bold;
-    text-align: center;
-    position: fixed;
-    font-size: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: limegreen;
-    content: "Xsmall";
-  }
-  @include media-breakpoint-up(sm) {
-    &:before {
-      content: "small";
-      background: #f00;
-    }
-  }
-  @include media-breakpoint-up(md) {
-    font-size: $font-size-base;
-    &:before {
-      content: "middle";
-      background: green;
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    &:before {
-      content: "Large";
-      background: turquoise;
-    }
-  }
-  @include media-breakpoint-up(xl) {
-    &:before {
-      content: "XLarge";
-      background: #f09;
-    }
-  }
-  @include media-breakpoint-up(xxl) {
-    &:before {
-      content: "XXLarge";
-      background: #90f;
-    }
-  }
-}
-
 .nav-link,
 .btn-outline-light {
   text-transform: uppercase;
 }
 
+.navbar {
+  padding-top: 13px;
+  padding-bottom: 17px;
+}
+
+.navbar-brand {
+  padding-top: 2px;
+}
+
+.nav-item {
+  margin-left: 16px;
+}
+
 .navbar-light .navbar-nav .nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
   border: 2px solid transparent;
-  padding: 1px 10px;
+  padding: 6px 10px 6px 10px;
   border-radius: 4px;
   &:hover {
     border: 2px solid #5b6168;
@@ -67,10 +33,18 @@ body {
 }
 
 .carousel-item {
-  .btn-outline-light:hover {
-    color: #ffffff;
-    background: #23b7a4;
-    border-color: #23b7a4;
+  .btn-outline-light {
+    margin-top: 18px;
+    margin-right: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 14px;
+    &:hover {
+      color: #ffffff;
+      background: #23b7a4;
+      border-color: #23b7a4;
+    }
   }
 }
 
@@ -79,6 +53,7 @@ h1 {
   font-size: 36px;
   color: #ffffff;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 h2 {
@@ -86,17 +61,18 @@ h2 {
   font-size: 36px;
   color: #292f36;
   text-transform: uppercase;
-  margin-top: 85px;
-  margin-bottom: 60px;
+  margin-top: 78px;
+  margin-bottom: 47px;
   position: relative;
   padding-left: 24px;
+  letter-spacing: -1.5px;
   &:before {
     content: "";
     position: absolute;
     height: 35px;
     width: 10px;
     background: #e1e6ea;
-    top: 0;
+    top: 2px;
     left: 0;
   }
 }
@@ -106,9 +82,19 @@ h3 {
   font-size: 18px;
   color: #292f36;
   text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: -0.8px;
+}
+
+.section-par {
+  font: 16px/26px "Open Sans", sans-serif;
+  color: #8d8f92;
+  margin-bottom: 27px;
 }
 
 .section-box {
+  margin-top: 5px;
+  margin-left: 17px;
   span {
     font-family: "Quattrocento Sans", sans-serif;
     width: 50px;
@@ -121,7 +107,7 @@ h3 {
 }
 
 .section-item {
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .offcanvas-top {
@@ -141,6 +127,10 @@ h3 {
   background-color: #fff;
 }
 
+.carousel-item img {
+  height: 660px;
+}
+
 .carousel-caption {
   left: 0;
   top: calc(50% - 100px);
@@ -151,10 +141,12 @@ h3 {
 
 .wrapper-caption {
   position: absolute;
-  left: 0;
+  left: 45px;
   right: 0;
+  top: -32px;
   bottom: 0;
   height: 100%;
+  letter-spacing: -1.75px;
 }
 
 .column-relative {
@@ -167,11 +159,18 @@ h3 {
 }
 
 .main-wrapper {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   border-bottom: 1px solid #dde1e4;
 }
 
+.article-par {
+  font: 16px/26px "Open Sans", sans-serif;
+  margin-bottom: 26px;
+  color: #8d8f92;
+}
+
 .social-networks {
+  margin-top: 48px;
   height: 60px;
   .facebook {
     height: 60px;
@@ -182,10 +181,10 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 60px;
-      width: 60px;
+      top: 15px;
+      left: 15px;
+      height: 40px;
+      width: 40px;
       background: url(../images/sprite/sprite.svg#facebook-icon) no-repeat;
     }
     &:hover {
@@ -202,10 +201,10 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 60px;
-      width: 60px;
+      top: 15px;
+      left: 15px;
+      height: 40px;
+      width: 40px;
       background: url(../images/sprite/sprite.svg#twitter-icon) no-repeat;
     }
     &:hover {
@@ -221,10 +220,10 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 60px;
-      width: 60px;
+      top: 15px;
+      left: 15px;
+      height: 40px;
+      width: 40px;
       background: url(../images/sprite/sprite.svg#google-icon) no-repeat;
     }
     &:hover {
@@ -240,10 +239,10 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 60px;
-      width: 60px;
+      top: 15px;
+      left: 15px;
+      height: 40px;
+      width: 40px;
       background: url(../images/sprite/sprite.svg#dribbble-icon) no-repeat;
     }
     &:hover {
@@ -259,10 +258,10 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 60px;
-      width: 60px;
+      top: 15px;
+      left: 15px;
+      height: 40px;
+      width: 40px;
       background: url(../images/sprite/sprite.svg#behance-icon) no-repeat;
     }
     &:hover {
@@ -272,8 +271,10 @@ h3 {
 }
 
 .meet-team {
+  padding-top: 7px;
   position: relative;
   text-decoration: none;
+  margin-bottom: 95px;
   &:hover h4,
   &:hover p {
     background: #3a454d;
@@ -282,13 +283,14 @@ h3 {
   &:hover .social-net-team a {
     display: block;
   }
+
   h4 {
     font-family: "Quattrocento Sans", sans-serif;
     font-size: 16px;
     color: #292f36;
     text-transform: uppercase;
     background: #e1e6ea;
-    padding: 20px 20px;
+    padding: 20px 20px 7px 20px;
 
     p {
       font-family: "Open Sans", sans-serif;
@@ -309,6 +311,9 @@ h3 {
     }
   }
   .twitter-team {
+    position: absolute;
+    top: 132px;
+    left: 73px;
     height: 50px;
     width: 50px;
     margin-right: 1px;
@@ -317,14 +322,17 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 50px;
-      width: 50px;
+      top: 13px;
+      left: 12px;
+      height: 30px;
+      width: 30px;
       background: url(../images/sprite/sprite.svg#twitter-icon) no-repeat;
     }
   }
   .facebook-team {
+    position: absolute;
+    top: 132px;
+    left: 73px;
     height: 50px;
     width: 50px;
     margin-right: 1px;
@@ -333,14 +341,17 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 50px;
-      width: 50px;
+      top: 13px;
+      left: 12px;
+      height: 30px;
+      width: 30px;
       background: url(../images/sprite/sprite.svg#facebook-icon) no-repeat;
     }
   }
   .linkedin-team {
+    position: absolute;
+    top: 132px;
+    left: 73px;
     height: 50px;
     width: 50px;
     margin-right: 1px;
@@ -349,10 +360,10 @@ h3 {
     &:after {
       position: absolute;
       content: "";
-      top: 6px;
-      left: 5px;
-      height: 50px;
-      width: 50px;
+      top: 13px;
+      left: 12px;
+      height: 30px;
+      width: 30px;
       background: url(../images/sprite/sprite.svg#linkedin-icon) no-repeat;
     }
   }
